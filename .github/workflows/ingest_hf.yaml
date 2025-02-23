@@ -1,4 +1,4 @@
-name: Run DLT Pipeline
+name: Run HF DLT Pipeline
 
 on:
   schedule:
@@ -26,4 +26,4 @@ jobs:
         run: echo "HF_TOKEN=${{ secrets.HF_TOKEN }}" >> .env
 
       - name: Run DLT Pipeline
-        run: uv run dlt_pipe.py
+        run: uv run hf_pipeline.py
