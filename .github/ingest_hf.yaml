@@ -22,5 +22,8 @@ jobs:
       - name: Install Dependencies
         run: uv sync
 
+      - name: Set Hugging Face Token
+        run: echo "HF_TOKEN=${{ secrets.HF_TOKEN }}" >> .env
+
       - name: Run DLT Pipeline
         run: uv run dlt_pipe.py

@@ -11,3 +11,8 @@ dependencies = [
     "huggingface-hub>=0.29.1",
     "pandas>=2.2.3",
 ]
+
+[dependency-groups]
+dev = [
+    "python-dotenv>=1.0.1",
+]

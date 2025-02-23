@@ -1,9 +1,16 @@
 import dlt
+import os
 import requests
 import yaml
 import pandas as pd
 from datetime import datetime
 from datasets import load_dataset, Dataset, Features, Value
+from dotenv import load_dotenv
+
+load_dotenv()
+
+HF_TOKEN = os.getenv('HF_TOKEN')
+
 
 BASE_URL = "https://huggingface.co/api/{}/{}?expand[]=downloads&expand[]=downloadsAllTime&expand[]=sha"
 REPO_NAME = "Gabriel/hf_repo_stats" 
@@ -57,7 +64,8 @@ def hf_destination(items, table):
     combined_dataset = Dataset.from_pandas(combined_df, features=features)
     combined_dataset.push_to_hub(
         REPO_NAME,
-        private=False 
+        private=False, 
+        token=HF_TOKEN
     )
 
 pipeline = dlt.pipeline(pipeline_name="hf_repo_stats_pipeline", destination=hf_destination)
