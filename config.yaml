@@ -1,0 +1,13 @@
+models:
+  - Riksarkivet/rtmdet_regions
+  - Riksarkivet/satrn_htr
+  - Riksarkivet/rtmdet_lines
+  - Riksarkivet/yolov9-regions-1
+  - Riksarkivet/yolov9-lines-within-regions-1
+  - Riksarkivet/trocr-base-handwritten-swe
+  - Riksarkivet/trocr-base-handwritten-hist-swe-2
+
+datasets:
+  - Riksarkivet/swener_1800
+  - Riksarkivet/eval_htr_out_of_domain_lines
+  - Riksarkivet/swedish_fraktur

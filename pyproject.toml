@@ -1,0 +1,13 @@
+[project]
+name = "ra-stats"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "datasets>=3.3.2",
+    "dlt>=1.7.0",
+    "duckdb>=1.2.0",
+    "huggingface-hub>=0.29.1",
+    "pandas>=2.2.3",
+]
